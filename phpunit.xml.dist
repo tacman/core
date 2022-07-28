@@ -30,6 +30,14 @@
         <!-- ###+ symfony/mailer ### -->
         <!-- MAILER_DSN=smtp://localhost -->
         <!-- ###- symfony/mailer ### -->
+<<<<<<< ours
+=======
+
+        <!-- ###+ symfony/framework-bundle ### -->
+        <env name="APP_ENV" value="dev"/>
+        <env name="APP_SECRET" value="9e51f0d93cf4856558e35a02f77a7b75"/>
+        <!-- ###- symfony/framework-bundle ### -->
+>>>>>>> theirs
     </php>
 
     <testsuites>

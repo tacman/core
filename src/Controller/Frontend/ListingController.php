@@ -27,11 +27,12 @@ class ListingController extends TwigAwareController implements FrontendZoneInter
         $this->query = $query;
     }
 
+//    *     requirements={"contentTypeSlug"="%bolt.requirement.contenttypes%"},
+
     /**
      * @Route(
      *     "/{contentTypeSlug}",
      *     name="listing",
-     *     requirements={"contentTypeSlug"="%bolt.requirement.contenttypes%"},
      *     methods={"GET|POST"})
      * @Route(
      *     "/{_locale}/{contentTypeSlug}",

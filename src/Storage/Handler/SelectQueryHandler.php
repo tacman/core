@@ -10,9 +10,9 @@ use Bolt\Storage\Directive\LimitDirective;
 use Bolt\Storage\Directive\PageDirective;
 use Bolt\Storage\SelectQuery;
 use Doctrine\ORM\Query;
-use Pagerfanta\Adapter\DoctrineORMAdapter;
 use Pagerfanta\Pagerfanta;
 use Symfony\Component\HttpFoundation\Request;
+use Pagerfanta\Doctrine\ORM\QueryAdapter as DoctrineORMAdapter;
 
 /**
  *  Handler class to perform select query and return a resultset.
