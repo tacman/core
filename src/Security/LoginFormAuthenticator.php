@@ -41,7 +41,7 @@ class LoginFormAuthenticator extends AbstractAuthenticator implements Authentica
         return $request->attributes->get('_route') === 'bolt_login' && $request->isMethod('POST');
     }
 
-    public function authenticate(Request $request): PassportInterface
+    public function authenticate(Request $request): Passport
     {
         /** @var array $login_form */
         $login_form = $request->request->get('login');

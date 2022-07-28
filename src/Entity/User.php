@@ -22,6 +22,11 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class User implements UserInterface, \Serializable, PasswordAuthenticatedUserInterface
 {
+    public function getUserIdentifier(): string
+    {
+        return $this->getEmail();
+    }
+
     /**
      * @var int
      *
@@ -249,7 +254,7 @@ class User implements UserInterface, \Serializable, PasswordAuthenticatedUserInt
     {
         return serialize($this->__serialize());
     }
-    
+
     public function __serialize(): array
     {
         return [$this->id, $this->username, $this->password];
@@ -262,7 +267,7 @@ class User implements UserInterface, \Serializable, PasswordAuthenticatedUserInt
     {
         $this->__unserialize(unserialize($serialized, ['allowed_classes' => false]));
     }
-    
+
     public function __unserialize(array $data): void
     {
         // add $this->salt too if you don't use Bcrypt or Argon2i

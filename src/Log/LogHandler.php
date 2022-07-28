@@ -23,7 +23,7 @@ class LogHandler extends AbstractProcessingHandler
     /**
      * Called when writing to our database
      */
-    protected function write(array $record): void
+    protected function write(array|\Monolog\LogRecord $record): void
     {
         $logEntry = new Log();
         $logEntry->setMessage($record['message']);
